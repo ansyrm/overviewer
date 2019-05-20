@@ -31,7 +31,7 @@ COPY download_url.py /home/minecraft/download_url.py
 
 RUN chown minecraft:minecraft -R /home/minecraft/
 
-WORKDIR /home/minecraft/
+WORKDIR /home/minecraft/render
 
 USER minecraft
 
