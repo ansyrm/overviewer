@@ -27,8 +27,7 @@ markers = [
 renders["day"] = {
     'world': 'minecraft',
     'title': 'Day',
-    'crop': (-2500, -2500, 2500, 2500),
-    'rendermode': 'smooth_lighting',
+    'rendermode': 'normal',
     "dimension": "overworld",
     'markers': markers
 }
@@ -36,8 +35,15 @@ renders["day"] = {
 renders["night"] = {
     'world': 'minecraft',
     'title': 'Night',
-    'crop': (-2500, -2500, 2500, 2500),
-    'rendermode': 'smooth_night',
+    'rendermode': 'normal',
+    "dimension": "overworld",
+    'markers': markers
+}
+
+renders["day"] = {
+    'world': 'minecraft',
+    'title': 'Cave',
+    'rendermode': 'cave',
     "dimension": "overworld",
     'markers': markers
 }
@@ -45,8 +51,7 @@ renders["night"] = {
 renders["nether"] = {
     "world": "minecraft",
     "title": "Nether",
-    'crop': (-2500, -2500, 2500, 2500),
-    "rendermode": 'nether_smooth_lighting',
+    "rendermode": 'nether',
     "dimension": "nether",
     'markers': markers
 }
@@ -54,7 +59,6 @@ renders["nether"] = {
 renders["end"] = {
     "world": "minecraft",
     "title": "End",
-    'crop': (-2500, -2500, 2500, 2500),
     "rendermode": [Base(), EdgeLines(), SmoothLighting(strength=0.5)],
     "dimension": "end",
     'markers': markers
@@ -64,7 +68,6 @@ renders["overlay_biome"] = {
     'world': 'minecraft',
     'rendermode': [ClearBase(), BiomeOverlay()],
     'title': "Biome Coloring Overlay",
-    'crop': (-2500, -2500, 2500, 2500),
     "dimension": "overworld",
     'overlay': ["day"]
 }
@@ -73,7 +76,6 @@ renders["overlay_mobs"] = {
     'world': 'minecraft',
     'rendermode': [ClearBase(), SpawnOverlay()],
     'title': "Mob Spawnable Areas Overlay",
-    'crop': (-2500, -2500, 2500, 2500),
     "dimension": "overworld",
     'overlay': ["day"]
 }
@@ -82,7 +84,6 @@ renders["overlay_slime"] = {
     'world': 'minecraft',
     'rendermode': [ClearBase(), SlimeOverlay()],
     'title': "Slime Chunk Overlay",
-    'crop': (-2500, -2500, 2500, 2500),
     "dimension": "overworld",
     'overlay': ["day"]
 }
