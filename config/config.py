@@ -35,7 +35,7 @@ renders["day"] = {
 renders["night"] = {
     'world': 'minecraft',
     'title': 'Night',
-    'rendermode': 'smooth_lighting',
+    'rendermode': 'smooth_night',
     "dimension": "overworld",
     'markers': markers
 }
