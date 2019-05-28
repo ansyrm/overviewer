@@ -1,10 +1,10 @@
 # To use this Docker image, make sure you set up the mounts properly.
 #
 # The Minecraft server files are expected at
-#     /home/minecraft/server
+#     /servers
 #
 # The Minecraft-Overviewer render will be output at
-#     /home/minecraft/render
+#     /renders
 
 FROM debian:stretch
 
@@ -23,7 +23,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     useradd -m minecraft && \
-    mkdir -p /home/minecraft/render /home/minecraft/server
+    mkdir -p /renders /servers
 
 COPY config/config.py /home/minecraft/config.py
 COPY entrypoint.sh /home/minecraft/entrypoint.sh
