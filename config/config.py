@@ -15,8 +15,8 @@ def signFilter(poi):
             return "\n".join([poi['Text1'], poi['Text2'], poi['Text3'], poi['Text4']])
 
 
-worlds['minecraft'] = "/home/minecraft/server/world"
-outputdir = "/home/minecraft/render/"
+worlds['minecraft'] = "/servers/world"
+outputdir = "/renders/"
 texturepath = "/home/minecraft/{}.jar".format(os.environ['MINECRAFT_VERSION'])
 
 markers = [
